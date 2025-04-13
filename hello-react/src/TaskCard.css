@@ -1,0 +1,4 @@
+/* TaskCard.css */
+.card {
+  @apply bg-white shadow-md p-4 rounded-md mb-4;
+}
