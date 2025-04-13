@@ -1,26 +1,26 @@
-import React from 'react';
-import TaskCard from './TaskCard';
+import React from "react";
+import TaskCard from "./TaskCard";
 
 const App: React.FC = () => {
   const pendingTasks = [
     {
-      title: 'Finish TypeScript Migration',
-      dueDate: '2025-04-15',
-      assigneeName: 'Amrutha'
+      title: "Finish TypeScript Migration",
+      dueDate: "2025-04-15",
+      assigneeName: "Amrutha",
     },
     {
-      title: 'Write Documentation',
-      dueDate: '2025-04-20',
-      assigneeName: 'Sai'
-    }
+      title: "Write Documentation",
+      dueDate: "2025-04-20",
+      assigneeName: "Sai",
+    },
   ];
 
   const doneTasks = [
     {
-      title: 'Set up Vite Project',
-      completedAtDate: '2025-04-10',
-      assigneeName: 'Amrutha'
-    }
+      title: "Set up Vite Project",
+      completedAtDate: "2025-04-10",
+      assigneeName: "Amrutha",
+    },
   ];
 
   return (

@@ -1,5 +1,5 @@
-import React from 'react';
-import './TaskCard.css';
+import React from "react";
+import "./TaskCard.css";
 
 interface TaskCardProps {
   title: string;
@@ -12,7 +12,7 @@ const TaskCard: React.FC<TaskCardProps> = ({
   title,
   dueDate,
   completedAtDate,
-  assigneeName
+  assigneeName,
 }) => {
   return (
     <div className="card">
