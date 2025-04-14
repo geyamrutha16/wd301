@@ -1,5 +1,4 @@
-import React from "react";
-import TaskApp from "./TaskApp";
+import TaskApp from './TaskApp';
 
 function App() {
   return <TaskApp />;
