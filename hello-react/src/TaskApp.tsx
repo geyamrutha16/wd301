@@ -1,34 +1,25 @@
-import React, { useState } from "react";
-import TaskForm from "./TaskForm";
-import TaskList from "./TaskList";
-
-interface Task {
-  id: number;
-  title: string;
-  dueDate: string;
-  description?: string;
-}
+import { useState } from 'react';
+import TaskForm from './TaskForm';
+import TaskList from './TaskList';
+import { Task } from './types';
 
 const TaskApp: React.FC = () => {
   const [tasks, setTasks] = useState<Task[]>([]);
 
-  const handleAddTask = (
-    title: string,
-    dueDate: string,
-    description: string,
-  ) => {
+  const addTask = (title: string, description: string, dueDate: string) => {
     const newTask: Task = {
       id: Date.now(),
       title,
-      dueDate,
       description,
+      dueDate,
     };
     setTasks([...tasks, newTask]);
   };
 
   return (
-    <div>
-      <TaskForm onAddTask={handleAddTask} />
+    <div className="max-w-xl mx-auto">
+      <h1 className="text-2xl font-bold mb-4">Smarter Tasks</h1>
+      <TaskForm onAdd={addTask} />
       <TaskList tasks={tasks} />
     </div>
   );
